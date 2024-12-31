@@ -59,7 +59,7 @@ index 64c594bd7..5f0cb6238 100644
 +		   -mllvm -polly-invariant-load-hoisting \
 +		   -mllvm -polly-opt-fusion=max \
 +		   -mllvm -polly-run-inliner \
-+		   -mllvm -polly-vectorizer=stripmine
++		   -mllvm -polly-vectorizer=stripmine -mllvm -regalloc-enable-advisor=release
 +# Polly may optimise loops with dead paths beyound what the linker
 +# can understand. This may negate the effect of the linker's DCE
 +# so we tell Polly to perfom proven DCE on the loops it optimises
