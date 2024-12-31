@@ -84,6 +84,7 @@ index a20e6efd3..66adb2fc9 100644
 +	bool "Use Clang Polly optimizations"
 +	depends on CC_IS_CLANG
 +	depends on !COMPILE_TEST
++ default y
 +	help
 +	  This option enables Clang's polyhedral loop optimizer known as
 +	  Polly. Polly is able to optimize various loops throughout the
@@ -91,7 +92,6 @@ index a20e6efd3..66adb2fc9 100644
 +	  compiled with support for Polly. More information can be found
 +	  from Polly's website:
 +
-+	    https://polly.llvm.org
 +
  config HAVE_KERNEL_GZIP
  	bool
